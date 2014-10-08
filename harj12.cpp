@@ -48,16 +48,21 @@ int getUserInput()
 
 void printRepeatingNumbers(int from, int to)
 {
-	int i;
-	for (i = from; i <= to; i++)
+
+	for (int i = from; i <= to; i++)
+	{
 		repeatPrint(i, i);
+	}
 }
 
 void repeatPrint(int numberToPrint, int times)
 {
-	int i;
-	for (i = 0; i < times; i++)
+	
+	for (int i = 0; i < times; i++)
+	{
 		cout << numberToPrint;
-		cout << endl;
+	}
+			cout << endl;
 }
+
 
