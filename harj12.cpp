@@ -17,32 +17,47 @@ Versio 1.0
 #include <iostream>
 using namespace std;
 
-int i = 1;
-int j = 0;
-int number = 1;
-void jmethod(int);
-void imethod(int);
+
+void repeatPrint(int, int);
+void printRepeatingNumbers(int, int);
+void clearConsole();
+int getUserInput();
 
 int main()
 {
-	cout << "Insert number between 1-9 and press Enter" << endl;
-	cin >> number;
-	system("cls");
-	imethod(number);
+	
+	int number = getUserInput();
+	clearConsole();
+	printRepeatingNumbers(1, number);
 
 	return(0);
 }
 
-void imethod(int number)
+void clearConsole()
 {
-	for (i = 1; i <= number; ++i)
-		jmethod(i);
+	system("cls");
 }
 
-void jmethod(int i)
+int getUserInput()
 {
-	for (j = 0; j < i; ++j)
-		cout << i;
+	int number = 1;
+	cout << "Insert number between 1-9 and press Enter" << endl;
+	cin >> number;
+	return number;
+}
+
+void printRepeatingNumbers(int from, int to)
+{
+	int i;
+	for (i = from; i <= to; i++)
+		repeatPrint(i, i);
+}
+
+void repeatPrint(int numberToPrint, int times)
+{
+	int i;
+	for (i = 0; i < times; i++)
+		cout << numberToPrint;
 		cout << endl;
 }
 
