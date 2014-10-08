@@ -62,7 +62,7 @@ void repeatPrint(int numberToPrint, int times)
 	{
 		cout << numberToPrint;
 	}
-			cout << endl;
+	cout << endl;
 }
 
 
