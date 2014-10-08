@@ -15,9 +15,10 @@ Versio 1.0
 */
 
 #include <iostream>
+#include <string>
 using namespace std;
 
-
+void printToConsole(string);
 void repeatPrint(int, int);
 void printRepeatingNumbers(int, int);
 void clearConsole();
@@ -25,12 +26,17 @@ int getUserInput();
 
 int main()
 {
-	
+	printToConsole("Insert number between 1-9 and press Enter");
 	int number = getUserInput();
 	clearConsole();
 	printRepeatingNumbers(1, number);
 
 	return(0);
+}
+
+void printToConsole(string instructions)
+{
+	cout << instructions << endl;
 }
 
 void clearConsole()
@@ -40,8 +46,7 @@ void clearConsole()
 
 int getUserInput()
 {
-	int number = 1;
-	cout << "Insert number between 1-9 and press Enter" << endl;
+	int number;
 	cin >> number;
 	return number;
 }
